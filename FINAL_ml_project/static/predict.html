@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Placement | InternSaathi</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+
+    <nav class="navbar glass">
+        <div class="logo">Intern<span class="highlight">Saathi</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/predict">Predict Placement</a></li>
+            <li><a href="/recommend">Find Internships</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+
+    <main id="app-container">
+        <section class="section active">
+            <div class="form-container glass">
+                <h2>Placement Probability Predictor</h2>
+                <p>Enter your academic and project details to gauge your placement readiness.</p>
+
+                <form id="placementForm">
+                    <div class="input-group">
+                        <label for="cgpa">CGPA (0-10)</label>
+                        <input type="number" id="cgpa" step="0.01" min="0" max="10" required placeholder="e.g. 8.5">
+                    </div>
+                    <div class="input-group">
+                        <label for="mock_oa">Mock OA Score (0-100)</label>
+                        <input type="number" id="mock_oa" min="0" max="100" required placeholder="e.g. 75">
+                    </div>
+                    <div class="input-group">
+                        <label for="projects">Number of Projects</label>
+                        <input type="number" id="projects" min="0" required placeholder="e.g. 2">
+                    </div>
+                    <div class="input-group">
+                        <label for="internships">Internships Completed</label>
+                        <input type="number" id="internships" min="0" required placeholder="e.g. 1">
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Analyze Profile</button>
+                </form>
+
+                <div id="placementResult" class="result-box hidden">
+                    <!-- Result injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

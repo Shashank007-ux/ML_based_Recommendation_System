@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Internships | InternSaathi</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+
+    <nav class="navbar glass">
+        <div class="logo">Intern<span class="highlight">Saathi</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict Placement</a></li>
+            <li class="active"><a href="/recommend">Find Internships</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+
+    <main id="app-container">
+        <section class="section active">
+            <div class="split-layout">
+                <div class="form-container glass small-side">
+                    <h2>Find Internships</h2>
+                    <form id="recommendForm">
+                        <div class="input-group">
+                            <label for="role">Preferred Role</label>
+                            <input type="text" id="role" required placeholder="e.g. Data Scientist">
+                        </div>
+                        <div class="input-group">
+                            <label for="skills">Key Skills (comma separated)</label>
+                            <input type="text" id="skills" required placeholder="e.g. Python, SQL, ML">
+                        </div>
+                        <div class="input-group">
+                            <label for="location">Preferred Location</label>
+                            <input type="text" id="location" required placeholder="e.g. Bangalore">
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Get Recommendations</button>
+                    </form>
+                </div>
+
+                <div class="results-container big-side">
+                    <h3>Recommended Opportunities</h3>
+                    <div id="internshipList" class="cards-grid">
+                        <div class="empty-state">
+                            <p>Fill out the form to see tailored internship matches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

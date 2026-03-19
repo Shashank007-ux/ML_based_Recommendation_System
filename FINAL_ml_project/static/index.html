@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternSaathi | AI Career Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+
+    <nav class="navbar glass">
+        <div class="logo">Intern<span class="highlight">Saathi</span></div>
+        <ul class="nav-links">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/predict">Predict Placement</a></li>
+            <li><a href="/recommend">Find Internships</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+
+    <main id="app-container">
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero-content">
+                <h1>Unlock Your <span class="text-gradient">Career Potential</span></h1>
+                <p>AI-powered tools to predict your placement success and find the perfect internships tailored to your
+                    skills.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="window.location.href='/predict'">Check Probability</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='/recommend'">Explore
+                        Internships</button>
+                </div>
+            </div>
+            <div class="hero-stats glass">
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Internships</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
